@@ -16,7 +16,7 @@ const Home = () => {
     <Card
       className="gradient-border border-0 w-[80vw] h-fit m-auto bg-opacity-heavy backdrop-filter backdrop-blur-lg p-5 rounded-xl shadow-lg 
       radius-3xl
-      hover:bg-opacity-medium dark:hover:bg-opacity-medium"
+      hover:bg-opacity-heavy dark:hover:bg-opacity-medium"
     >
       <CardHeader
         className="flex flex-col"
