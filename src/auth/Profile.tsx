@@ -58,15 +58,16 @@ const Profile = () => {
         Helia IPFS CMS
       </CardTitle>
       <div className="grid grid-cols-1 content-start md:grid-cols-2">
-        <CardHeader className="flex w-[20vw] items-center">
-          <CardDescription >
-            <Avatar className="w-32 h-32">
+        <CardHeader className="flex flex-col md:flex-row md:items-center">
+          <CardDescription className="flex flex-col items-center md:items-start">
+            <Avatar className="mx-auto w-32 h-32 md:mx-0">
               <AvatarImage src="https://github.com/shadcn.png" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
-            <h1 className="text-xl font-bold text-center">John Doe</h1>
-        </CardDescription>
+            <h1 className="text-xl font-bold text-center md:text-left">John Doe</h1>
+          </CardDescription>
         </CardHeader>
+        
         <CardContent className="w-[60vw]">
           <div className="pt-2 my-16 font-mono min-h-fit">
             <div className="container mx-auto">
@@ -80,7 +81,14 @@ const Profile = () => {
                     </div>
                     <div className='px-3 mb-6 w-full md:w-full'>
                       <label className='block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase'>password</label>
-                      <button className="px-2 py-1 text-gray-900 bg-gray-200 rounded-md border border-gray-400 shadow-sm appearance-none">change your password</button>
+                      <div className="w-full btn-wrapper">
+                        <Button
+                            onClick={() => onSubmit(form.getValues())}
+                            type="submit"
+                            className="pr-3 pl-3 m-auto w-full border-0 bg-card bg-opacity-medium text-card-foreground"
+                          >Change your password</Button>
+                        <div className="w-1/2 btn-bg"></div>
+                      </div>
                     </div>
                     <div className='px-3 mb-6 w-full md:w-full'>
                       <label className='block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase'>pick your country</label>
@@ -132,7 +140,14 @@ const Profile = () => {
                         <textarea className='px-3 py-2 w-full h-20 font-medium leading-normal placeholder-gray-700 bg-gray-100 rounded-md border border-gray-400 shadow-inner resize-none focus:outline-none focus:bg-white' required></textarea>
                       </div>
                       <div className="flex justify-end">
-                        <button className="px-2 py-1 mr-3 text-gray-900 bg-gray-200 rounded-md border border-gray-400 shadow-sm appearance-none" type="submit">save changes</button>
+                        <div className="w-full btn-wrapper">
+                          <Button
+                              onClick={() => onSubmit(form.getValues())}
+                              type="submit"
+                              className="pr-3 pl-3 m-auto w-full border-0 bg-card bg-opacity-medium text-card-foreground"
+                            >Save Change</Button>
+                          <div className="w-1/2 btn-bg"></div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -169,22 +184,20 @@ const Profile = () => {
       <CardFooter
         className="flex flex-row justify-between w-full"
       >
-        <div className="w-1/2 btn-wrapper">
-          <Button
-            type='submit'
-            onClick={() => onSubmit(form.getValues())}
-            className="pr-3 m-auto w-full border-0 bg-card text-card-foreground">
-            Save
-          </Button>
-          <div className="w-1/2 btn-bg"></div>
-        </div>
-        <div className="w-1/2 btn-wrapper">
-          <Button className="pr-3 m-auto w-full border-0 bg-card text-card-foreground">
-            Forgot your login ?
-          </Button>
-          <div className="w-1/2 btn-bg"></div>
-        </div>
-
+         <div className="w-full btn-wrapper">
+             <Button
+                onClick={() => onSubmit(form.getValues())}
+                type="submit"
+                className="pr-3 pl-3 m-auto w-full border-0 bg-card bg-opacity-medium text-card-foreground"
+              >Save</Button>
+            <div className="w-1/2 btn-bg"></div>
+          </div>
+          <div className="w-full btn-wrapper">
+             <Button
+                className="pr-3 pl-3 m-auto w-full border-0 bg-card bg-opacity-medium text-card-foreground"
+              >Forgot your login ?</Button>
+            <div className="w-1/2 btn-bg"></div>
+          </div>
       </CardFooter>
      
     </Card>

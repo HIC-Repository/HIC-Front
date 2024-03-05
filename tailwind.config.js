@@ -33,10 +33,10 @@ module.exports = {
     },
     extend: {
        opacity: {
-        'light': '0.1', // 10% d'opacité, pour un effet très léger
-        'medium': '0.5', // 50% d'opacité, pour un équilibre entre visible et transparent
-        'heavy': '0.8', // 80% d'opacité, pour un effet plus prononcé tout en gardant une certaine transparence
-        'almost-solid': '0.95', // 95% d'opacité, presque solide mais légèrement transparent
+        light: '0.1', // 10% d'opacité, pour un effet très léger
+        medium: '0.5', // 50% d'opacité, pour un équilibre entre visible et transparent
+        heavy: '0.8', // 80% d'opacité, pour un effet plus prononcé tout en gardant une certaine transparence
+        solid: '0.95', // 95% d'opacité, presque solide mais légèrement transparent
       },
       height: {
         Nav: "var(--nav-height)",

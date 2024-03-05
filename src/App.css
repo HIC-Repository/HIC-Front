@@ -265,8 +265,8 @@
     color: #fff;
     &:after{
       width: 120%;
-    };
-  };
+    }
+  }
   &:after {
     position: absolute;
     transition: 0.3s;

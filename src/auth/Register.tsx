@@ -114,23 +114,26 @@ const Register = () => {
               </FormItem>
             )}
           />
-           <div className="btn-wrapper w-full">
+          <div className="w-full btn-wrapper">
              <Button
                 type="submit"
-                className="w-full m-auto bg-card bg-opacity-80 text-card-foreground border-0 pr-3 pl-3"
+                className="pr-3 pl-3 m-auto w-full border-0 bg-card bg-opacity-medium text-card-foreground"
               >Register</Button>
-            <div className="btn-bg w-1/2"></div>
+            <div className="w-1/2 btn-bg"></div>
           </div>
         </form>
       </Form>
 
       </CardContent>
        <CardFooter>
-        <Button 
-         onClick={() => navigate('/Login')}
-         className="w-full">
-          Log in
-        </Button>
+         <div className="w-full btn-wrapper">
+             <Button
+                onClick={() => navigate('/Login')}
+                type="submit"
+                className="pr-3 pl-3 m-auto w-full border-0 bg-card bg-opacity-medium text-card-foreground"
+              >Login</Button>
+            <div className="w-1/2 btn-bg"></div>
+          </div>
       </CardFooter>
     </Card>
   )
